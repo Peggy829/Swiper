@@ -1,0 +1,69 @@
+.wrap {
+  width: 800px;
+  height: 400px;
+  position: relative;
+}
+.list {
+  width: 800px;
+  height: 400px;
+  /* 清除原有样式 */
+  list-style: none;
+  position: relative;
+  padding-left: 0;
+}
+.item {
+  /* 定位：子绝父相 */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: large;
+  opacity: 0;
+  transition: all .8s;
+}
+.item:nth-child(1) {
+  background-color: blueviolet;
+}
+.item:nth-child(2) {
+  background-color: pink;
+}
+.item:nth-child(3) {
+  background-color: skyblue;
+}
+.btn-left,.btn-right {
+  width: 50px;
+  height: 100px;
+  position: absolute;
+  top: 150px;
+  z-index: 100;
+}
+.btn-left{
+  left: 0;
+}
+.btn-right{
+  right: 0;
+}
+.item.active {
+  z-index: 10;
+  opacity: 1;
+}
+.pointList {
+  padding-left: 0;
+  list-style: none;
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  z-index: 100;
+}
+.point{
+  width: 8px;
+  height: 8px;
+  background-color: rgba(0,0,0,.4);
+  border-radius: 100%;
+  float: left;
+  margin-right: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+.point.active{
+  background-color: rgba(255,255,255,.2);
+}
